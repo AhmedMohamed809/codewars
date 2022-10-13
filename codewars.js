@@ -34,7 +34,20 @@
 // console.log(overTheRoad(23633656673, 310027696726)); // 6
 //#####################################################################
 //https://www.codewars.com/kata/5715eaedb436cf5606000381/train/javascript 
-function positiveSum(arr) {
-   return arr.filter(x=>x>0).reduce((c,v)=>c+=v,0)
-}
-console.log(positiveSum([1,-2,3,4,5]))//13
+// function positiveSum(arr) {
+//    return arr.filter(x=>x>0).reduce((c,v)=>c+=v,0)
+// }
+// console.log(positiveSum([1,-2,3,4,5]))//13
+//##########################################
+//            Kata 7 
+//https://www.codewars.com/kata/54bf85e3d5b56c7a05000cf9/train/javascript
+
+var number=function(array){
+  if(array.length == 0 ){
+    return []
+  }else {
+  let r= array.map((x,index)=>`${index+1}: ${x}` )
+  console.log(r)
+  return r;
+}}
+console.log(number(["a", "b", "c"])) // ["1: a", "2: b", "3: c"]
