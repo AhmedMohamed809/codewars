@@ -1,3 +1,5 @@
+
+    
 //https://www.codewars.com/kata/5f0ed36164f2bc00283aed07/train/javascript
 // function overTheRoad(address, n) {
 //   let eveNumber = [];
@@ -39,7 +41,7 @@
 // }
 // console.log(positiveSum([1,-2,3,4,5]))//13
 //##########################################
-//            Kata 7 
+//                              Kata 7 
 //https://www.codewars.com/kata/54bf85e3d5b56c7a05000cf9/train/javascript
 
 // var number=function(array){
@@ -65,19 +67,20 @@
 
 
 // ########################################################
-//               Kata 5
+//                                 Kata 5
 
-function moveZeros(arr) {
+// function moveZeros(arr) {
 
   
-  let r = arr.map((x,i)=>{
-    if( x==0){
-        x[i].splice(arr.length-1, 1, 0);
-    }
-return x 
-});
-  console.log(r)
-  return r 
+//   let r = arr.map((x,i)=>{
+//     if( x==0){
+//         x[i].splice(arr.length-1, 1, 0);
+//     }
+// return x 
+// });
+//   console.log(r)
+//   return r 
 
-}
-console.log(moveZeros([1, 2, 0, 1, 3, 1, 0, 0, 0, 0]));
+// }
+// console.log(moveZeros([1, 2, 0, 1, 3, 1, 0, 0, 0, 0]));
+
