@@ -42,12 +42,42 @@
 //            Kata 7 
 //https://www.codewars.com/kata/54bf85e3d5b56c7a05000cf9/train/javascript
 
-var number=function(array){
-  if(array.length == 0 ){
-    return []
-  }else {
-  let r= array.map((x,index)=>`${index+1}: ${x}` )
+// var number=function(array){
+//   if(array.length == 0 ){
+//     return []
+//   }else {
+//   let r= array.map((x,index)=>`${index+1}: ${x}` )
+//   console.log(r)
+//   return r;
+// }}
+// console.log(number(["a", "b", "c"])) // ["1: a", "2: b", "3: c"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ########################################################
+//               Kata 5
+
+function moveZeros(arr) {
+
+  
+  let r = arr.map((x,i)=>{
+    if( x==0){
+        x[i].splice(arr.length-1, 1, 0);
+    }
+return x 
+});
   console.log(r)
-  return r;
-}}
-console.log(number(["a", "b", "c"])) // ["1: a", "2: b", "3: c"]
+  return r 
+
+}
+console.log(moveZeros([1, 2, 0, 1, 3, 1, 0, 0, 0, 0]));
