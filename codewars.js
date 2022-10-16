@@ -70,9 +70,15 @@
 //  console.log(calculate("1minus2minus3minus4")); // -8
 ////////////////////////////////////////////
 //https://www.codewars.com/kata/557cd6882bfa3c8a9f0000c1/train/javascript
-function getAge(inputString) {
-  return inputString.split(" ")[0] * 1;
-}
+// function getAge(inputString) {
+//   return inputString.split(" ")[0] * 1;
+// }
+//####################################################
+//https://www.codewars.com/kata/5250a89b1625e5decd000413/train/javascript
+var flatten = function (array) {
+  return array.flat(array.length);
+};
+
 
 
 
