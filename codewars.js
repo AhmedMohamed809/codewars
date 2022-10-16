@@ -81,17 +81,33 @@
 //##########################################
 //https://www.codewars.com/kata/546e2562b03326a88e000020/train/javascript
 
-function squareDigits(num) {
-let arryNumber = num.toString().split("");
-let newArray=[]
-for(let i=0;i<arryNumber.length;i++){
-newArray.push(parseInt(arryNumber[i] * arryNumber[i]));
-}
-return newArray.join("") ;
-}
-console.log(squareDigits(2112)); // expect to equl 4114
+// function squareDigits(num) {
+// let arryNumber = num.toString().split("");
+// let newArray=[]
+// for(let i=0;i<arryNumber.length;i++){
+// newArray.push(parseInt(arryNumber[i] * arryNumber[i]));
+// }
+// return newArray.join("") ;
+// }
+// console.log(squareDigits(2112)); // expect to equl 4114
+//################################################################
 
 
+function DNAStrand(dna) {
+let newDna=dna.split("").map(x=>{
+    if (x == "A") {
+      return x.replace(/A/gi, "T");
+    } else if (x == "T") {
+      return x.replace(/T/gi, "A");
+    } else if (x == "C") {
+      return x.replace(/C/gi, "G");
+    } else if (x == "G") {
+      return x.replace(/G/gi, "C");
+    }
+});
+  return newDna.join("");
+}
+console.log(DNAStrand("ATTGC"));
 
 
 
