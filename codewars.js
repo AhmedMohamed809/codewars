@@ -60,14 +60,19 @@
 //###########################################
 //www.codewars.com/kata/5809b62808ad92e31b000031/train/javascript
 
- function calculate(str) {
-   const plus = /plus/gi;
-   const minus = /minus/gi;
-   let sum = str.replace(plus, "+").replace(minus, "-");
+//  function calculate(str) {
+//    const plus = /plus/gi;
+//    const minus = /minus/gi;
+//    let sum = str.replace(plus, "+").replace(minus, "-");
 
-   return eval(sum).toString();
- }
- console.log(calculate("1minus2minus3minus4")); // -8
+//    return eval(sum).toString();
+//  }
+//  console.log(calculate("1minus2minus3minus4")); // -8
+////////////////////////////////////////////
+//https://www.codewars.com/kata/557cd6882bfa3c8a9f0000c1/train/javascript
+function getAge(inputString) {
+  return inputString.split(" ")[0] * 1;
+}
 
 
 
