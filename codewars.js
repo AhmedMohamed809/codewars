@@ -75,11 +75,21 @@
 // }
 //####################################################
 //https://www.codewars.com/kata/5250a89b1625e5decd000413/train/javascript
-var flatten = function (array) {
-  return array.flat();
-};
+// var flatten = function (array) {
+//   return array.flat();
+// };
+//##########################################
+//https://www.codewars.com/kata/546e2562b03326a88e000020/train/javascript
 
-
+function squareDigits(num) {
+let arryNumber = num.toString().split("");
+let newArray=[]
+for(let i=0;i<arryNumber.length;i++){
+newArray.push(parseInt(arryNumber[i] * arryNumber[i]));
+}
+return newArray.join("") ;
+}
+console.log(squareDigits(2112)); // expect to equl 4114
 
 
 
