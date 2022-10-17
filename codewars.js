@@ -110,14 +110,36 @@
 // console.log(DNAStrand("ATTGC"));
 //############################################
 //https://www.codewars.com/kata/574b3b1599d8f897470018f6/train/javascript
-function getRealFloor(n) {
-  if (n > 13) {
-    return 13;
-  } else if (n < 13) return n - 1;
+// function getRealFloor(n) {
+//   if (n > 13) {
+//     return 13;
+//   } else if (n < 13) return n - 1;
+// }
+
+//##################################
+//https://www.codewars.com/kata/54da5a58ea159efa38000836/train/javascript
+function findOdd(A) {
+  const count = {};
+  let resalt="";
+
+  A.forEach((element) => {
+      count[element] = (count[element] || 0) + 1;
+    });
+   
+    for (const  key in count) {
+         
+      if (count[key] % 2 !== 0) {
+     resalt = key
+    
+    }
+    }
+    console.log(count)
+    return resalt;
 }
 
-
-
+  console.log(
+    findOdd([20, 1, -1, 2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5])
+  );
 
 
 
