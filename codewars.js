@@ -93,21 +93,28 @@
 //################################################################
 
 
-function DNAStrand(dna) {
-let newDna=dna.split("").map(x=>{
-    if (x == "A") {
-      return x.replace(/A/gi, "T");
-    } else if (x == "T") {
-      return x.replace(/T/gi, "A");
-    } else if (x == "C") {
-      return x.replace(/C/gi, "G");
-    } else if (x == "G") {
-      return x.replace(/G/gi, "C");
-    }
-});
-  return newDna.join("");
+// function DNAStrand(dna) {
+// let newDna=dna.split("").map(x=>{
+//     if (x == "A") {
+//       return x.replace(/A/gi, "T");
+//     } else if (x == "T") {
+//       return x.replace(/T/gi, "A");
+//     } else if (x == "C") {
+//       return x.replace(/C/gi, "G");
+//     } else if (x == "G") {
+//       return x.replace(/G/gi, "C");
+//     }
+// });
+//   return newDna.join("");
+// }
+// console.log(DNAStrand("ATTGC"));
+//############################################
+//https://www.codewars.com/kata/574b3b1599d8f897470018f6/train/javascript
+function getRealFloor(n) {
+  if (n > 13) {
+    return 13;
+  } else if (n < 13) return n - 1;
 }
-console.log(DNAStrand("ATTGC"));
 
 
 
