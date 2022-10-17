@@ -114,38 +114,14 @@
 //   if (n > 13) {
 //     return 13;
 //   } else if (n < 13) return n - 1;
-// }
+// }             
 
-//##################################
-//https://www.codewars.com/kata/54da5a58ea159efa38000836/train/javascript
-function findOdd(A) {
-  const count = {};
-  let resalt="";
-
-  A.forEach((element) => {
-      count[element] = (count[element] || 0) + 1;
-    });
-   
-    for (const  key in count) {
-         
-      if (count[key] % 2 !== 0) {
-     resalt = key
-    
-    }
-    }
-    console.log(count)
-    return resalt;
-}
-
-  console.log(
-    findOdd([20, 1, -1, 2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5])
-  );
 
 
 
 
 // ########################################################
-//                                 Kata 5
+//                                 Kata 6
 
 // function moveZeros(arr) {
 
@@ -162,3 +138,64 @@ function findOdd(A) {
 // }
 // console.log(moveZeros([1, 2, 0, 1, 3, 1, 0, 0, 0, 0]));
 
+//##################################
+//https://www.codewars.com/kata/54da5a58ea159efa38000836/train/javascript
+// function findOdd(A) {
+//   const count = {};
+//   let resalt="";
+
+//   A.forEach((element) => {
+//       count[element] = (count[element] || 0) + 1;
+//     });
+   
+//     for (const  key in count) {
+         
+//       if (count[key] % 2 !== 0) {
+//      resalt = key
+    
+//     }
+//     }
+//     console.log(count)
+//     return resalt;
+// }
+
+//   console.log(
+//     findOdd([20, 1, -1, 2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5])
+//   );
+//#############################################
+//https://www.codewars.com/kata/541c8630095125aba6000c00/train/javascript
+
+function digitalRoot(n) {
+    let randomNumber=0;
+let newNumber=n.toString().split("").map(x=>x*1).reduce((c,v)=>{c=c+v;
+return c ; 
+},0);
+
+
+if(newNumber < 9){
+return +newNumber
+}else  if (newNumber >= 10) {
+   randomNumber= newNumber
+    .toString()
+    .split("")
+    .map((x) => x * 1)
+    .reduce((c, v) => {
+      c = c + v;
+      return c;
+    }, 0);
+    if(randomNumber >=10)
+    {
+        return randomNumber
+          .toString()
+          .split("")
+          .map((x) => x * 1)
+          .reduce((c, v) => {
+            c = c + v;
+            return c;
+          }, 0);
+    }
+    return randomNumber
+}
+}
+
+console.log(digitalRoot(766081));
