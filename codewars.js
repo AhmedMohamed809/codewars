@@ -165,37 +165,57 @@
 //#############################################
 //https://www.codewars.com/kata/541c8630095125aba6000c00/train/javascript
 
-function digitalRoot(n) {
-    let randomNumber=0;
-let newNumber=n.toString().split("").map(x=>x*1).reduce((c,v)=>{c=c+v;
-return c ; 
-},0);
+// function digitalRoot(n) {
+//     let randomNumber=0;
+// let newNumber=n.toString().split("").map(x=>x*1).reduce((c,v)=>{c=c+v;
+// return c ; 
+// },0);
 
 
-if(newNumber < 9){
-return +newNumber
-}else  if (newNumber >= 10) {
-   randomNumber= newNumber
-    .toString()
-    .split("")
-    .map((x) => x * 1)
-    .reduce((c, v) => {
-      c = c + v;
-      return c;
-    }, 0);
-    if(randomNumber >=10)
-    {
-        return randomNumber
-          .toString()
-          .split("")
-          .map((x) => x * 1)
-          .reduce((c, v) => {
-            c = c + v;
-            return c;
-          }, 0);
+// if(newNumber < 9){
+// return +newNumber
+// }else  if (newNumber >= 10) {
+//    randomNumber= newNumber
+//     .toString()
+//     .split("")
+//     .map((x) => x * 1)
+//     .reduce((c, v) => {
+//       c = c + v;
+//       return c;
+//     }, 0);
+//     if(randomNumber >=10)
+//     {
+//         return randomNumber
+//           .toString()
+//           .split("")
+//           .map((x) => x * 1)
+//           .reduce((c, v) => {
+//             c = c + v;
+//             return c;
+//           }, 0);
+//     }
+//     return randomNumber
+// }
+// }
+
+//######################
+//https://www.codewars.com/kata/523f5d21c841566fde000009/train/javascript
+// function arrayDiff(a, b) {
+// let ran = a.filter((x) => !b.includes(x));
+// return ran 
+// }
+// console.log(arrayDiff([1,2,2], [2]));// 1
+//####################################
+
+
+var countBits = function (n) {
+    let count = 0 ;
+  let toDigt= n.toString(2).split('').map(x=>x*1).filter(x=>{
+    if(x==1){
+       return count++
     }
-    return randomNumber
-}
-}
+  });
+  return count
 
-console.log(digitalRoot(766081));
+};
+console.log(countBits(10));
