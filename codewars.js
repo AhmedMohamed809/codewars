@@ -208,14 +208,95 @@
 //####################################
 
 
-var countBits = function (n) {
-    let count = 0 ;
-  let toDigt= n.toString(2).split('').map(x=>x*1).filter(x=>{
-    if(x==1){
-       return count++
-    }
-  });
-  return count
+// var countBits = function (n) {
+//     let count = 0 ;
+//   let toDigt= n.toString(2).split('').map(x=>x*1).filter(x=>{
+//     if(x==1){
+//        return count++
+//     }
+//   });
+//   return count
 
-};
-console.log(countBits(10));
+// };
+// console.log(countBits(10));
+////#################################################################
+//####
+// https://www.codewars.com/kata/54bf1c2cd5b56cc47f0007a1/train/javascript
+// 
+
+// function duplicateCount(text) {
+//     let count=0
+
+// let newArray = text.toLowerCase().split("")
+
+// if(newArray.length==0){
+
+// return count
+
+// }
+
+// let r = newArray.filter((x, i) => newArray.indexOf(x) !== i)
+
+// for(let i = 0 ; i < r.length;i++){
+
+// if (r.indexOf(r[i]) == i ){
+
+// count += 1
+
+// }
+
+// }
+
+// console.log(count);
+
+// return count
+
+// }
+
+// console.log(duplicateCount("Indivisibility"));
+//################################
+// function findShort(s) {
+//   let g = 0;
+//   let arry = s.split(" ");
+//   g = arry[0].length;
+//   for (i = 0; i < arry.length; i++) {
+//     if (arry[i].length <  arry[i+1].length) {
+//       g = arry[i].length;
+//     }
+//   }
+//   console.log(g);
+// }
+// console.log(findShort("bitcoin take over the world maybe who knows perhaps"));
+// #######################################
+
+// function expandedForm(num) {
+//   let r = num.toString().split("");
+//   console.log(r)
+//   let map = r.map((x) => x * 1);
+//   if (r.length == 2) {
+//     let hi = `${map[0] * 10} + ${map[1]}`;
+//     console.log(hi);
+//     return hi;
+//   } else {
+//       let first = map.slice(0,2).join("")
+//       let seco =  map.slice(2,4).join("")
+//   console.log(first);
+//     let y = `${first  * 100} + ${seco * 10} + ${map[map.length - 1]}`;
+//     return y;
+//   }
+// }
+// console.log(expandedForm(70304)); // 7000 + 300 + 4
+//##########################
+function stringExpansion(s) {
+  let ms = s.split("");
+  console.log(typeof ms[0])
+let n=[]
+for ( let i = 0 ; i < ms.length;i++){
+if(ms[i]== '0' && typeof m[i+1] == string  || ms[i]== '1' || ms[i]== '2'|| ms[i]== '3' || ms[i]== '4' || ms[i]== '5'){
+    n.push(ms[i+1].repeat(ms[i] *1))
+}
+}
+  console.log(ms);
+return n.join('')
+}
+console.log(stringExpansion("3d332f2a"));
