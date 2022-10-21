@@ -287,16 +287,45 @@
 // }
 // console.log(expandedForm(70304)); // 7000 + 300 + 4
 //##########################
-function stringExpansion(s) {
-  let ms = s.split("");
-  console.log(typeof ms[0])
-let n=[]
-for ( let i = 0 ; i < ms.length;i++){
-if(ms[i]== '0' && typeof m[i+1] == string  || ms[i]== '1' || ms[i]== '2'|| ms[i]== '3' || ms[i]== '4' || ms[i]== '5'){
-    n.push(ms[i+1].repeat(ms[i] *1))
+// function stringExpansion(s) {
+//   let ms = s.split("");
+//   console.log(typeof ms[0])
+// let n=[]
+// for ( let i = 0 ; i < ms.length;i++){
+// if(ms[i]== '0' && typeof m[i+1] == string  || ms[i]== '1' || ms[i]== '2'|| ms[i]== '3' || ms[i]== '4' || ms[i]== '5'){
+//     n.push(ms[i+1].repeat(ms[i] *1))
+// }
+// }
+//   console.log(ms);
+// return n.join('')
+// }
+// console.log(stringExpansion("3d332f2a"));
+//########################################################
+//https://www.codewars.com/kata/550498447451fbbd7600041c/train/javascript
+function comp(array1, array2) {
+  console.log(array1, array2);
+  if (
+    (array1 == null && array2.length == 0) ||
+    (array1.length == 0 && array2 == null)
+  ) {
+    return false;
+  } else if (!array1.length && !array2.length) {
+    return true;
+  }
+  let chece = array1.map((a) => a * a).sort();
+  let check2 = array2.sort();
+  if (chece.length === check2.length) {
+    return chece.every((element, index) => {
+      if (element === check2[index]) {
+        return true;
+      }
+
+      return false;
+    });
+  } else {
+    return false;
+  }
 }
-}
-  console.log(ms);
-return n.join('')
-}
-console.log(stringExpansion("3d332f2a"));
+
+
+comp([], null);
