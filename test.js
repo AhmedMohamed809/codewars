@@ -40,3 +40,42 @@
 // const sentence = "The quick brown fox jumps over the lazy dog.";
 // console.log(sentence.charCodeAt(2));
 
+
+
+
+const greekGods = [
+  "Aphrodite",
+  "Ares",
+  "Artemis",
+  "Athena",
+  "Poseidon",
+  "Zeus",
+];
+// for(let i = 0 ; i < greekGods.length;i++){
+//     if(i==2){
+//     setTimeout(function () {
+//       console.log(i,greekGods[2]);
+//     }, 2000);
+// }else{
+//     console.log(i,greekGods[i])
+// }
+// }
+greekGods.forEach((god,i)=>{
+        if (i == 2) {
+          setTimeout( ()=>{
+            console.log(i, god);
+          }, 2000);
+        } else {
+          console.log(i, god);
+        }
+})
+let r= document.getElementById
+let li = document.createElement("li")
+r.forEach(x=>{
+    li.innerHTML(x)
+})
+
+
+
+
+
