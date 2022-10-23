@@ -302,30 +302,52 @@
 // console.log(stringExpansion("3d332f2a"));
 //########################################################
 //https://www.codewars.com/kata/550498447451fbbd7600041c/train/javascript
-function comp(array1, array2) {
-  console.log(array1, array2);
-  if (
-    (array1 == null && array2.length == 0) ||
-    (array1.length == 0 && array2 == null)
-  ) {
-    return false;
-  } else if (!array1.length && !array2.length) {
-    return true;
-  }
-  let chece = array1.map((a) => a * a).sort();
-  let check2 = array2.sort();
-  if (chece.length === check2.length) {
-    return chece.every((element, index) => {
-      if (element === check2[index]) {
-        return true;
-      }
+// function comp(array1, array2) {
+//   console.log(array1, array2);
+//   if (
+//     (array1 == null && array2.length == 0) ||
+//     (array1.length == 0 && array2 == null)
+//   ) {
+//     return false;
+//   } else if (!array1.length && !array2.length) {
+//     return true;
+//   }
+//   let chece = array1.map((a) => a * a).sort();
+//   let check2 = array2.sort();
+//   if (chece.length === check2.length) {
+//     return chece.every((element, index) => {
+//       if (element === check2[index]) {
+//         return true;
+//       }
 
-      return false;
-    });
-  } else {
-    return false;
+//       return false;
+//     });
+//   } else {
+//     return false;
+//   }
+// }
+
+
+// comp([], null);
+//###########################
+// 
+function isPangram(string){
+  const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+  let H= true;
+  for(let i = 0 ; i < alphabet.length;i++){
+    let arrayStr= string.split("").filter((x)=>{
+      
+    if(  x === alphabet[i].toLocaleLowerCase() ) {
+      h = true ;
+    } else {
+      h=false ;
+    }
+    
+    })
+      console.log(arrayStr);
   }
+  return h 
+
 }
-
-
-comp([], null);
+  var string = "The quick brown fox jumps over the lazy dog."
+  console.log(isPangram(string)) //  true 
