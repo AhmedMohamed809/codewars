@@ -137,7 +137,18 @@
 
 // }
 // console.log(moveZeros([1, 2, 0, 1, 3, 1, 0, 0, 0, 0]));
-
+//#####################################
+ 
+ 
+function splitTheBill(x) {
+    
+let a = x.A
+let b = x.B
+let c = x.C
+return {A:a-b,B:b-b,C:c-b}
+}
+let x ={A: 20, B: 15, C: 10}
+console.log(splitTheBill(x)) // {A: 5, B: 0, C: -5}
 //##################################
 //https://www.codewars.com/kata/54da5a58ea159efa38000836/train/javascript
 // function findOdd(A) {
@@ -331,23 +342,23 @@
 // comp([], null);
 //###########################
 // 
-function isPangram(string){
-  const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-  let H= false;
-  for(let i = 0 ; i < alphabet.length;i++){
-    let arrayStr= string.split("").filter((x)=>{
+// function isPangram(string){
+//   const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+//   let H= false;
+//   for(let i = 0 ; i < alphabet.length;i++){
+//     let arrayStr= string.split("").filter((x)=>{
       
-    if(  x === alphabet[i].toLocaleLowerCase() ) {
-      h = true ;
-    } else {
-      h=false ;
-    }
+//     if(  x === alphabet[i].toLocaleLowerCase() ) {
+//       h = true ;
+//     } else {
+//       h=false ;
+//     }
     
-    })
-      console.log(arrayStr);
-  }
-  return h 
+//     })
+//       console.log(arrayStr);
+//   }
+//   return h 
 
-}
-  var string = "The quick brown fox jumps over the lazy dog."
-  console.log(isPangram(string)) //  true 
+// }
+//   var string = "The quick brown fox jumps over the lazy dog."
+//   console.log(isPangram(string)) //  true 
