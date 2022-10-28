@@ -139,16 +139,34 @@
 // console.log(moveZeros([1, 2, 0, 1, 3, 1, 0, 0, 0, 0]));
 //#####################################
  
- 
-function splitTheBill(x) {
-    
-let a = x.A
-let b = x.B
-let c = x.C
-return {A:a-b,B:b-b,C:c-b}
+ //sudo code 
+ // get avarage 
+ // return obj  - avarage 
+
+ function splitTheBill(x) {
+let val = Object.values(x)
+console.log(val)
+let count = 0 ;
+
+for(let i = 0 ; i < val.length; i ++ ){
+    count += val[i];
 }
-let x ={A: 20, B: 15, C: 10}
+
+let avarage = count/ val.length;
+console.log(avarage);
+
+for (const key in x) {
+    x[key]=Math.round((x[key] - avarage * 100)/100);
+}
+
+console.log(x)   ;   
+
+return x ;
+}
+let x ={A: 40, B: 15, C: 10}
 console.log(splitTheBill(x)) // {A: 5, B: 0, C: -5}
+
+
 //##################################
 //https://www.codewars.com/kata/54da5a58ea159efa38000836/train/javascript
 // function findOdd(A) {
