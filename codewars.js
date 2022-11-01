@@ -143,29 +143,60 @@
  // get avarage 
  // return obj  - avarage 
 
- function splitTheBill(x) {
-let val = Object.values(x)
-console.log(val)
-let count = 0 ;
+//  function splitTheBill(x) {
+// let val = Object.values(x)
+// console.log(val)
+// let count = 0 ;
 
-for(let i = 0 ; i < val.length; i ++ ){
-    count += val[i];
+// for(let i = 0 ; i < val.length; i ++ ){
+//     count += val[i];
+// }
+
+// let avarage = count/ val.length;
+// console.log(avarage);
+
+// for (const key in x) {
+//     x[key]=Math.round((x[key] - avarage * 100)/100);
+// }
+
+// console.log(x)   ;   
+
+// return x ;
+// }
+// let x ={A: 40, B: 15, C: 10}
+// console.log(splitTheBill(x)) // {A: 5, B: 0, C: -5}
+//###############################
+/*
+Sudo Code :
+1- find a number  
+2- comper  this number is grete that Sum all number in the right side 
+2.1 - get the sum all number in the right side 
+2.2 - if the number is gerten than the 2.1  
+2.3 - push that number to a new array 
+repeat all step 
+
+*/
+function arrayLeaders(numbers) {
+let newLeager=[];
+let sum = 0 ;
+let i = 0
+do {
+    if(numbers[i]){
+        
+        sum = sum + numbers[i+1];
+     
+        console.log(sum)
+    } 
+    if(numbers[i] > sum){
+  newLeager.push(numbers[i]);
+    }
+    i++
+    
+} while (i < numbers.length-1);
+
+return newLeager
 }
-
-let avarage = count/ val.length;
-console.log(avarage);
-
-for (const key in x) {
-    x[key]=Math.round((x[key] - avarage * 100)/100);
-}
-
-console.log(x)   ;   
-
-return x ;
-}
-let x ={A: 40, B: 15, C: 10}
-console.log(splitTheBill(x)) // {A: 5, B: 0, C: -5}
-
+console.log(arrayLeaders([16, 17, 4, 3, 5, 2])); // [ 17,5,2]
 
 //##################################
 //https://www.codewars.com/kata/54da5a58ea159efa38000836/train/javascript
