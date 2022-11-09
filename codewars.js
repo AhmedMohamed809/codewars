@@ -176,27 +176,17 @@ Sudo Code :
 repeat all step 
 
 */
-function arrayLeaders(numbers) {
-let newLeager=[];
-let sum = 0 ;
-let i = 0
-do {
-    if(numbers[i]){
-        
-        sum = sum + numbers[i+1];
-     
-        console.log(sum)
-    } 
-    if(numbers[i] > sum){
-  newLeager.push(numbers[i]);
-    }
-    i++
-    
-} while (i < numbers.length-1);
-
-return newLeager
-}
-console.log(arrayLeaders([16, 17, 4, 3, 5, 2])); // [ 17,5,2]
+function myFunction() {
+  let MyObject = {
+    objProperty: "string",
+    objMethod: function() {
+      return MyObject.objProperty;
+		},
+  }
+  
+   MyObject.objProperty;
+};
+console.log(myFunction);
 
 //##################################
 //https://www.codewars.com/kata/54da5a58ea159efa38000836/train/javascript
