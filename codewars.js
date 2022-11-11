@@ -176,17 +176,26 @@ Sudo Code :
 repeat all step 
 
 */
-function myFunction() {
-  let MyObject = {
-    objProperty: "string",
-    objMethod: function() {
-      return MyObject.objProperty;
-		},
-  }
-  
-   MyObject.objProperty;
-};
-console.log(myFunction);
+// var rooms = {
+//   first: {
+//     description: 'This is the first room',
+//     items: {
+//       chair: 'The old chair looks comfortable',
+//       lamp: 'This lamp looks ancient'
+//   }},
+//   second: {
+//     description: 'This is the second room',
+//     items: {
+//       couch: 'This couch looks like it would hurt your back',
+//       table: 'On the table there is an unopened bottle of water'
+//     }
+//   }
+// }
+//###################################
+function promiseHelloWorld() {
+  // replace this nonsense with your Promise
+  return new Promise("Hello World!");
+}
 
 //##################################
 //https://www.codewars.com/kata/54da5a58ea159efa38000836/train/javascript
