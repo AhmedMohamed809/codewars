@@ -1,5 +1,3 @@
-
-    
 //https://www.codewars.com/kata/5f0ed36164f2bc00283aed07/train/javascript
 // function overTheRoad(address, n) {
 //   let eveNumber = [];
@@ -35,13 +33,13 @@
 // }
 // console.log(overTheRoad(23633656673, 310027696726)); // 6
 //#####################################################################
-//https://www.codewars.com/kata/5715eaedb436cf5606000381/train/javascript 
+//https://www.codewars.com/kata/5715eaedb436cf5606000381/train/javascript
 // function positiveSum(arr) {
 //    return arr.filter(x=>x>0).reduce((c,v)=>c+=v,0)
 // }
 // console.log(positiveSum([1,-2,3,4,5]))//13
 //##########################################
-//                              Kata 7 
+//                              Kata 7
 //https://www.codewars.com/kata/54bf85e3d5b56c7a05000cf9/train/javascript
 
 // var number=function(array){
@@ -53,9 +51,6 @@
 //   return r;
 // }}
 // console.log(number(["a", "b", "c"])) // ["1: a", "2: b", "3: c"]
-
-
-
 
 //###########################################
 //www.codewars.com/kata/5809b62808ad92e31b000031/train/javascript
@@ -92,7 +87,6 @@
 // console.log(squareDigits(2112)); // expect to equl 4114
 //################################################################
 
-
 // function DNAStrand(dna) {
 // let newDna=dna.split("").map(x=>{
 //     if (x == "A") {
@@ -114,34 +108,29 @@
 //   if (n > 13) {
 //     return 13;
 //   } else if (n < 13) return n - 1;
-// }             
-
-
-
-
+// }
 
 // ########################################################
 //                                 Kata 6
 
 // function moveZeros(arr) {
 
-  
 //   let r = arr.map((x,i)=>{
 //     if( x==0){
 //         x[i].splice(arr.length-1, 1, 0);
 //     }
-// return x 
+// return x
 // });
 //   console.log(r)
-//   return r 
+//   return r
 
 // }
 // console.log(moveZeros([1, 2, 0, 1, 3, 1, 0, 0, 0, 0]));
 //#####################################
- 
- //sudo code 
- // get avarage 
- // return obj  - avarage 
+
+//sudo code
+// get avarage
+// return obj  - avarage
 
 //  function splitTheBill(x) {
 // let val = Object.values(x)
@@ -159,7 +148,7 @@
 //     x[key]=Math.round((x[key] - avarage * 100)/100);
 // }
 
-// console.log(x)   ;   
+// console.log(x)   ;
 
 // return x ;
 // }
@@ -192,11 +181,50 @@ repeat all step
 //   }
 // }
 //###################################
-function promiseHelloWorld() {
-  // replace this nonsense with your Promise
-  return new Promise("Hello World!");
-}
+//Say "Hello World" JS Style
 
+// function say(firstword) {
+//   return function (secondword) {
+//     return firstword + " " + secondword;
+//   };
+// }
+
+//  console.log(say("Hello")("World"));
+//############################
+//Debug Basic Calculator
+
+var calculate = function calculate(a, o, b) {
+  var result = null;
+
+  if (o === "+") {
+    return a + b;
+  } else if (o === "-") {
+    return a - b;
+  } else if (o === "/" && b !== 0) {
+    return a / b;
+  } else if (o === "*") {
+    return a * b;
+  }
+
+  return result;
+};
+console.log(calculate(4, "/", 0));
+//#################
+// function gap(num) {
+//   if (N === parseInt(N, 10) && N >= 1 && N <= 2147483647) {
+//     let Binary = num.toString(2);
+//     let BinaryArray = Binary.split(""); // ["1", "0", "0", "1"]
+//     const firstOne = BinaryArray.indexOf("1");
+//     let NewBinaryArray = BinaryArray.slice(firstOne + 1);
+//     const secondOne = NewBinaryArray.indexOf("1");
+//     const gaps = [];
+//     // adding 2 to our gaps array
+//     gaps.push(secondOne);
+//     return Math.max.apply(Math, gaps);
+//   }
+//   return 0;
+// }
+// console.log(gap(9));
 //##################################
 //https://www.codewars.com/kata/54da5a58ea159efa38000836/train/javascript
 // function findOdd(A) {
@@ -206,12 +234,12 @@ function promiseHelloWorld() {
 //   A.forEach((element) => {
 //       count[element] = (count[element] || 0) + 1;
 //     });
-   
+
 //     for (const  key in count) {
-         
+
 //       if (count[key] % 2 !== 0) {
 //      resalt = key
-    
+
 //     }
 //     }
 //     console.log(count)
@@ -227,9 +255,8 @@ function promiseHelloWorld() {
 // function digitalRoot(n) {
 //     let randomNumber=0;
 // let newNumber=n.toString().split("").map(x=>x*1).reduce((c,v)=>{c=c+v;
-// return c ; 
+// return c ;
 // },0);
-
 
 // if(newNumber < 9){
 // return +newNumber
@@ -261,11 +288,10 @@ function promiseHelloWorld() {
 //https://www.codewars.com/kata/523f5d21c841566fde000009/train/javascript
 // function arrayDiff(a, b) {
 // let ran = a.filter((x) => !b.includes(x));
-// return ran 
+// return ran
 // }
 // console.log(arrayDiff([1,2,2], [2]));// 1
 //####################################
-
 
 // var countBits = function (n) {
 //     let count = 0 ;
@@ -281,7 +307,7 @@ function promiseHelloWorld() {
 ////#################################################################
 //####
 // https://www.codewars.com/kata/54bf1c2cd5b56cc47f0007a1/train/javascript
-// 
+//
 
 // function duplicateCount(text) {
 //     let count=0
@@ -386,27 +412,26 @@ function promiseHelloWorld() {
 //   }
 // }
 
-
 // comp([], null);
 //###########################
-// 
+//
 // function isPangram(string){
 //   const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 //   let H= false;
 //   for(let i = 0 ; i < alphabet.length;i++){
 //     let arrayStr= string.split("").filter((x)=>{
-      
+
 //     if(  x === alphabet[i].toLocaleLowerCase() ) {
 //       h = true ;
 //     } else {
 //       h=false ;
 //     }
-    
+
 //     })
 //       console.log(arrayStr);
 //   }
-//   return h 
+//   return h
 
 // }
 //   var string = "The quick brown fox jumps over the lazy dog."
-//   console.log(isPangram(string)) //  true 
+//   console.log(isPangram(string)) //  true
