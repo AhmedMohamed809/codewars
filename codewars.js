@@ -190,25 +190,53 @@ repeat all step
 // }
 
 //  console.log(say("Hello")("World"));
+//###########################
+function multi(arr) {
+  let resalt = 1;
+  let newArray = arr
+    .toString()
+    .split(",")
+    .forEach((num) => {
+      resalt *= num * 1;
+      return resalt;
+    });
+  console.log(resalt);
+  return resalt;
+}
+function add(arr) {
+  let newArray = arr
+    .toString()
+    .split(",")
+    .reduce((crr, val) => {
+      crr += val * 1;
+      return crr;
+    }, 0);
+  return newArray;
+}
+function reverse(str) {
+  let newArray = str.toString().split("").reverse().join("");
+  return newArray;
+}
+console.log(reverse(["abcdefghijklmnopqrstuvwxyz"]));
 //############################
 //Debug Basic Calculator
 
-var calculate = function calculate(a, o, b) {
-  var result = null;
+// var calculate = function calculate(a, o, b) {
+//   var result = null;
 
-  if (o === "+") {
-    return a + b;
-  } else if (o === "-") {
-    return a - b;
-  } else if (o === "/" && b !== 0) {
-    return a / b;
-  } else if (o === "*") {
-    return a * b;
-  }
+//   if (o === "+") {
+//     return a + b;
+//   } else if (o === "-") {
+//     return a - b;
+//   } else if (o === "/" && b !== 0) {
+//     return a / b;
+//   } else if (o === "*") {
+//     return a * b;
+//   }
 
-  return result;
-};
-console.log(calculate(4, "/", 0));
+//   return result;
+// };
+// console.log(calculate(4, "/", 0));
 //#################
 // function gap(num) {
 //   if (N === parseInt(N, 10) && N >= 1 && N <= 2147483647) {
