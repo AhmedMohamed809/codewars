@@ -191,33 +191,50 @@ repeat all step
 
 //  console.log(say("Hello")("World"));
 //###########################
-function multi(arr) {
-  let resalt = 1;
-  let newArray = arr
-    .toString()
-    .split(",")
-    .forEach((num) => {
-      resalt *= num * 1;
-      return resalt;
-    });
-  console.log(resalt);
-  return resalt;
-}
-function add(arr) {
-  let newArray = arr
-    .toString()
-    .split(",")
-    .reduce((crr, val) => {
-      crr += val * 1;
-      return crr;
-    }, 0);
-  return newArray;
-}
-function reverse(str) {
-  let newArray = str.toString().split("").reverse().join("");
-  return newArray;
-}
-console.log(reverse(["abcdefghijklmnopqrstuvwxyz"]));
+// function moveZeros(arr) {
+//   let newArrray = arr.filter((x) => {
+//     if (x === false) {
+//       return !x;
+//     } else if (x == null) {
+//       return typeof null;
+//     } else if (x === null || x !== 0) {
+//       return x;
+//     }
+//   });
+//   console.log(newArrray);
+//   let zeroArray = arr.filter((x) => x === 0);
+//   return newArrray.concat(zeroArray);
+// }
+// console.log(moveZeros(["a", null, {}, false, 0, 0, [], true]));
+
+//##################
+// function multi(arr) {
+//   let resalt = 1;
+//   let newArray = arr
+//     .toString()
+//     .split(",")
+//     .forEach((num) => {
+//       resalt *= num * 1;
+//       return resalt;
+//     });
+//   console.log(resalt);
+//   return resalt;
+// }
+// function add(arr) {
+//   let newArray = arr
+//     .toString()
+//     .split(",")
+//     .reduce((crr, val) => {
+//       crr += val * 1;
+//       return crr;
+//     }, 0);
+//   return newArray;
+// }
+// function reverse(str) {
+//   let newArray = str.toString().split("").reverse().join("");
+//   return newArray;
+// }
+// console.log(reverse(["abcdefghijklmnopqrstuvwxyz"]));
 //############################
 //Debug Basic Calculator
 
