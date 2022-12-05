@@ -1,27 +1,6 @@
+function solution(A) {
+  let result = A.find((x) => x % 4 == 0 && x > 0);
 
-// let printValuesOf = (jsObject, keys) => {
-//   console.log(keys)
-//   for (let i = 0; i <= keys.length; i++) {
-//     let key = keys[i];
-//     console.log(jsObject[key]);
-//   }
-//   return jsObject
-// }
-
-// let simpsonsCatchphrases = {
-//   lisa: 'BAAAAAART!',
-//   bart: 'Eat My Shorts!',
-//   marge: 'Mmm~mmmmm',
-//   homer: `d'oh!`,
-//   maggie: '(Pacifier Suck)',
-// };
-
-// printValuesOf(simpsonsCatchphrases, ['lisa', 'bart', 'homer']);
-
-// Expected console output:
-
-// BAAAAAART!
-// Eat My Shorts!
-// d'oh!
-
-// Returns undefined
+  return result;
+}
+console.log(solution([-6, -91, 1011, -100, 84, -22, 0, 1, 473]));
