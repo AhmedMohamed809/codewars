@@ -10,13 +10,13 @@
 // multiplyAll([1, 2, 3])(2) = [2, 4, 6];
 //############################################
 //Coding Meetup #11 - Higher-Order Functions Series - Find the average age
-function getAverageAge(list) {
-  let ages = list.map((el) => el.age);
-  console.log(ages);
-  let sumAges = ages.reduce((c, item) => {
-    c = c + item;
-    return c;
-  }, 0);
-  console.log(sumAges);
-  return Math.round(sumAges / ages.length);
-}
+// function getAverageAge(list) {
+//   let ages = list.map((el) => el.age);
+//   console.log(ages);
+//   let sumAges = ages.reduce((c, item) => {
+//     c = c + item;
+//     return c;
+//   }, 0);
+//   console.log(sumAges);
+//   return Math.round(sumAges / ages.length);
+// }
