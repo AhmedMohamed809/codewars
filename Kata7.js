@@ -20,3 +20,14 @@
 //   console.log(sumAges);
 //   return Math.round(sumAges / ages.length);
 // }
+//#########################################################
+function findAdmin(list, lang) {
+  if (list.githubAdmin == []) {
+    return [];
+  }
+  let newlist = list.filter(
+    (el) => el.language.includes(lang) && el.githubAdmin == "yes"
+  );
+  console.log(newlist);
+  return newlist;
+}
