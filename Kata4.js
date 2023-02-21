@@ -6,18 +6,18 @@
 // );
 //'712577413488402631964821329'
 //###################
-// function nextBigger(n) {
-//   let number = n
-//     .toString()
-//     .split("")
-//     .map((x) => Number(x));
+function nextBigger(n) {
+  let number = n
+    .toString()
+    .split("")
+    .map((x) => Number(x));
 
-//   let r = number.filter((item, index) => {
-//     if (number[index] === item || number.length == 1) {
-//       return -1;
-//     }
-//   });
-//   console.log();
+  let r = number.filter((item, index) => {
+    if (number[index] === item || number.length == 1) {
+      return -1;
+    }
+  });
+  console.log();
 
 //   //   for (let i = 0; i < number.length; i++) {
 //   //     if (number.length == 1 || number.includes(number[i])) {
